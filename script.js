@@ -7,13 +7,8 @@ const formResults = document.getElementById('formResults');
 const faqItems = document.querySelectorAll('.faq-item');
 
 // Event Listeners
-if (eligibilityBtn) {
-    eligibilityBtn.addEventListener('click', () => {
-        // Scroll to form section
-        eligibilityForm.style.display = 'block';
-        eligibilityForm.scrollIntoView({ behavior: 'smooth' });
-    });
-}
+// The eligibility button now uses its href attribute to redirect directly
+// No JavaScript event handler needed for redirection
 
 // FAQ Toggle
 faqItems.forEach(item => {
