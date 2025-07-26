@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stimulus Assistance Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="notification-banner">
+        <i class="fas fa-clock"></i> Limited Time - Claim Deadline Extended
+    </div>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Claim Your <span class="highlight">Stimulus Assistance</span> Money Today</h1>
+            <p class="hero-text">Millions of Americans are eligible for unclaimed stimulus assistance funds. Check your eligibility in under 2 minutes and claim what's rightfully yours.</p>
+            
+            <div class="cta-container">
+                <a href="https://rewarrdsgiant.com/aff_c?offer_id=2343&aff_id=145517" class="cta-button" id="eligibilityBtn">
+                    Check My Eligibility Now <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="secure-badge">
+                    <i class="fas fa-shield-alt"></i> 100% Secure & Confidential
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Steps -->
+    <section class="process">
+        <div class="container">
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Quick Check</h3>
+                    <p>Answer a few simple questions about your eligibility</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Verify Info</h3>
+                    <p>Provide basic information to confirm your claim</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Paid</h3>
+                    <p>Receive your funds via direct deposit or check</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust">
+        <div class="container">
+            <h2>Trusted by Over 2.8 Million Americans</h2>
+            <p class="trust-text">Our secure platform has helped millions of Americans claim their rightful stimulus assistance funds.</p>
+            
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <div class="trust-icon security">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Bank-Level Security</h3>
+                    <p>256-bit SSL encryption protects your data</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon claims">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>2.8M+ Claims</h3>
+                    <p>Successfully processed claims nationwide</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon rating">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>A+ Rating</h3>
+                    <p>Better Business Bureau accredited</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon legitimate">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>100% Legitimate</h3>
+                    <p>Fully compliant with federal guidelines</p>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <h2 class="stat-number green">$2.8B+</h2>
+                    <p>Total Claims Processed</p>
+                </div>
+                <div class="stat">
+                    <h2 class="stat-number blue">98.7%</h2>
+                    <p>Success Rate</p>
+                </div>
+                <div class="stat">
+                    <h2 class="stat-number purple">5.0<i class="fas fa-star"></i></h2>
+                    <p>Average Customer Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility Form (Initially Hidden) -->
+    <section class="eligibility-form" id="eligibilityForm">
+        <div class="container">
+            <h2>Check Your Eligibility in 60 Seconds</h2>
+            <p>Answer a few quick questions to see if you qualify for stimulus assistance funds.</p>
+            
+            <div class="form-container">
+                <div class="progress-bar">
+                    <div class="progress" id="formProgress"></div>
+                </div>
+                <div class="progress-text" id="progressText">33% Complete</div>
+                
+                <form id="quizForm">
+                    <div class="question-slide active" id="question1">
+                        <h3>Question 1 of 3</h3>
+                        <div class="question">
+                            <p>Did you file taxes in 2020, 2021, or 2022?</p>
+                            <div class="options">
+                                <div class="option">
+                                    <input type="radio" id="q1-yes" name="q1" value="yes">
+                                    <label for="q1-yes">Yes</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" id="q1-no" name="q1" value="no">
+                                    <label for="q1-no">No</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" id="q1-notsure" name="q1" value="not-sure">
+                                    <label for="q1-notsure">Not sure</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="next-btn" onclick="nextQuestion(1)">Next Question</button>
+                    </div>
+
+                    <div class="question-slide" id="question2">
+                        <h3>Question 2 of 3</h3>
+                        <div class="question">
+                            <p>What was your annual income in 2021?</p>
+                            <div class="options">
+                                <div class="option">
+                                    <input type="radio" id="q2-less" name="q2" value="less">
+                                    <label for="q2-less">Less than $75,000</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" id="q2-between" name="q2" value="between">
+                                    <label for="q2-between">$75,000 - $150,000</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" id="q2-more" name="q2" value="more">
+                                    <label for="q2-more">More than $150,000</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="prev-btn" onclick="prevQuestion(2)">Previous</button>
+                        <button type="button" class="next-btn" onclick="nextQuestion(2)">Next Question</button>
+                    </div>
+
+                    <div class="question-slide" id="question3">
+                        <h3>Question 3 of 3</h3>
+                        <div class="question">
+                            <p>Have you already received all stimulus payments you're entitled to?</p>
+                            <div class="options">
+                                <div class="option">
+                                    <input type="radio" id="q3-yes" name="q3" value="yes">
+                                    <label for="q3-yes">Yes, I've received all payments</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" id="q3-no" name="q3" value="no">
+                                    <label for="q3-no">No, I believe I'm missing payments</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" id="q3-notsure" name="q3" value="not-sure">
+                                    <label for="q3-notsure">Not sure</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="prev-btn" onclick="prevQuestion(3)">Previous</button>
+                        <a href="https://rewarrdsgiant.com/aff_c?offer_id=2343&aff_id=145517" class="submit-btn">Check My Eligibility</a>
+                    </div>
+                </form>
+
+                <div class="results" id="formResults">
+                    <div class="result-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Good News! You May Qualify</h3>
+                    <p>Based on your answers, you may be eligible for unclaimed stimulus funds. Complete the verification process to claim your payment.</p>
+                    <a href="https://rewarrdsgiant.com/aff_c?offer_id=2343&aff_id=145517" class="cta-button">Continue to Verification</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p>Get answers to common questions about claiming your stimulus assistance funds.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is stimulus assistance money?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Stimulus assistance money refers to economic relief payments issued by the federal government to help Americans during economic hardship. Many people are still eligible for unclaimed funds from previous stimulus programs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I know if I'm eligible?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Eligibility is based on several factors including your income, tax filing status, and whether you've already received all payments you're entitled to. Our quick eligibility check can help determine if you qualify.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is this service free?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our eligibility check is completely free. We only charge a small processing fee if you successfully claim funds through our service.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does the claim process take?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The initial eligibility check takes just 60 seconds. If you qualify, the verification process typically takes 3-5 business days, and funds are usually received within 1-2 weeks after verification.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my personal information secure?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We use bank-level 256-bit SSL encryption to protect all your data. We never share your information with third parties without your explicit consent.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What documents do I need?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For the verification process, you'll need a valid ID, your Social Security Number, and recent tax return information (if applicable). Our system will guide you through exactly what's needed.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="more-questions">
+                <p>Still have questions?</p>
+                <div class="contact-options">
+                    <a href="tel:1-800-123-4567" class="contact-option">
+                        <i class="fas fa-phone"></i> Call: 1-800-123-4567
+                    </a>
+                    <a href="mailto:help@stimulusassist.com" class="contact-option">
+                        <i class="fas fa-envelope"></i> Email: help@stimulusassist.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Stimulus Assist Portal</h3>
+                    <p>Helping Americans claim their rightful stimulus assistance funds with a secure, trusted platform.</p>
+                    <div class="footer-badge">
+                        <i class="fas fa-shield-alt"></i> 100% Secure & Confidential
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Check Eligibility</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 1-800-123-4567</li>
+                        <li><i class="fas fa-envelope"></i> help@stimulusassist.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Available Nationwide</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stimulus Assistance Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
