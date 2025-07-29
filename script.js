@@ -17,9 +17,9 @@ const affiliateLinks = {
 eligibilityBtn.addEventListener('click', function(e) {
     e.preventDefault();
     
-    // Randomly choose between original and new link (50/50 split)
+    // Randomly choose between original and new link (90/10 split)
     const randomValue = Math.random();
-    const targetLink = randomValue < 0.5 ? affiliateLinks.original : affiliateLinks.new;
+    const targetLink = randomValue < 0.9 ? affiliateLinks.original : affiliateLinks.new;
     
     // Redirect to the selected link
     window.location.href = targetLink;
