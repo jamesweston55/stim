@@ -6,9 +6,24 @@ const progressText = document.getElementById('progressText');
 const formResults = document.getElementById('formResults');
 const faqItems = document.querySelectorAll('.faq-item');
 
+// Affiliate links for traffic splitting
+const affiliateLinks = {
+    original: 'https://rewarrdsgiant.com/aff_c?offer_id=2343&aff_id=145517',
+    new: 'https://rewarrdsgiant.com/aff_c?offer_id=2499&aff_id=145517'
+};
+
 // Event Listeners
-// The eligibility button now uses its href attribute to redirect directly
-// No JavaScript event handler needed for redirection
+// Add click handler to implement 50/50 traffic split
+eligibilityBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Randomly choose between original and new link (50/50 split)
+    const randomValue = Math.random();
+    const targetLink = randomValue < 0.5 ? affiliateLinks.original : affiliateLinks.new;
+    
+    // Redirect to the selected link
+    window.location.href = targetLink;
+});
 
 // FAQ Toggle
 faqItems.forEach(item => {
@@ -109,3 +124,4 @@ document.addEventListener('DOMContentLoaded', function() {
         faqItems[0].classList.add('active');
     }
 });
+
