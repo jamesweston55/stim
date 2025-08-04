@@ -8,9 +8,8 @@ const faqItems = document.querySelectorAll('.faq-item');
 
 // Affiliate links for traffic splitting
 const affiliateLinks = {
-    link1: 'https://rewarduplevel.com/aff_c?offer_id=2343&aff_id=145517', // 50%
-    link2: 'https://taprain.com/redirect?data=eeyJ1IjoiaHR0cHM6Ly93d3cucHMwNmhnOXQuY29tL0pOUzk4Ui9MSDZTUkIvP3N1YjE9NjdkN2U3MjMzZWY5YzQxM2RjNmVjNzNlIiwiaSI6ImNwYS1zdGltdWx1cy1hc3Npc3RhbmNlIiwibiI6IlN0aW11bHVzIEFzc2lzdGFuY2UiLCJzMSI6IjY3ZDdlNzIzM2VmOWM0MTNkYzZlYzczZSIsInMyIjoiIiwic3JjIjoiY3BhLWZ1bm5lbHMiLCJwcmVzZXJ2ZV9zMSI6dHJ1ZSwicHJlc2VydmVfczIiOnRydWUsImN1c3RvbVN1YklkIjoiIn0=', // 30%
-    link3: 'https://rewarrdsgiant.com/aff_c?offer_id=2499&aff_id=145517' // 20%
+    link1: 'https://rewarduplevel.com/aff_c?offer_id=2343&aff_id=145517', // 70%
+    link2: 'https://rewarrdsgiant.com/aff_c?offer_id=2499&aff_id=145517' // 30%
 };
 
 // Event Listeners
@@ -18,16 +17,14 @@ const affiliateLinks = {
 eligibilityBtn.addEventListener('click', function(e) {
     e.preventDefault();
     
-    // Implement 50/30/20 traffic split
+    // Implement 70/30 traffic split
     const randomValue = Math.random();
     let targetLink;
     
-    if (randomValue < 0.5) {
-        targetLink = affiliateLinks.link1; // 50% of traffic
-    } else if (randomValue < 0.8) { // 0.5 + 0.3 = 0.8
-        targetLink = affiliateLinks.link2; // 30% of traffic
+    if (randomValue < 0.7) {
+        targetLink = affiliateLinks.link1; // 70% of traffic
     } else {
-        targetLink = affiliateLinks.link3; // 20% of traffic
+        targetLink = affiliateLinks.link2; // 30% of traffic
     }
     
     // Redirect to the selected link
