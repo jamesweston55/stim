@@ -8,8 +8,9 @@ const faqItems = document.querySelectorAll('.faq-item');
 
 // Affiliate links for traffic splitting
 const affiliateLinks = {
-    link1: 'https://rewarduplevel.com/aff_c?offer_id=2343&aff_id=145517', // 70%
-    link2: 'https://rewarrdsgiant.com/aff_c?offer_id=2499&aff_id=145517' // 30%
+    link1: 'https://rewarduplevel.com/aff_c?offer_id=2737&aff_id=145517', // 40%
+    link2: 'https://rewarduplevel.com/aff_c?offer_id=2343&aff_id=145517', // 30%
+    link3: 'https://rewarrdsgiant.com/aff_c?offer_id=2499&aff_id=145517' // 30%
 };
 
 // Event Listeners
@@ -17,14 +18,16 @@ const affiliateLinks = {
 eligibilityBtn.addEventListener('click', function(e) {
     e.preventDefault();
     
-    // Implement 70/30 traffic split
+    // Implement 40/30/30 traffic split
     const randomValue = Math.random();
     let targetLink;
     
-    if (randomValue < 0.7) {
-        targetLink = affiliateLinks.link1; // 70% of traffic
-    } else {
+    if (randomValue < 0.4) {
+        targetLink = affiliateLinks.link1; // 40% of traffic to new link
+    } else if (randomValue < 0.7) {
         targetLink = affiliateLinks.link2; // 30% of traffic
+    } else {
+        targetLink = affiliateLinks.link3; // 30% of traffic
     }
     
     // Redirect to the selected link
@@ -130,3 +133,4 @@ document.addEventListener('DOMContentLoaded', function() {
         faqItems[0].classList.add('active');
     }
 });
+
