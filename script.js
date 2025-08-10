@@ -13,19 +13,12 @@ const affiliateLinks = {
 };
 
 // Event Listeners
-// Add click handler to implement 50/50 traffic split
+// Add click handler to direct 100% traffic to offer 2499
 eligibilityBtn.addEventListener('click', function(e) {
     e.preventDefault();
     
-    // Implement 50/50 traffic split
-    const randomValue = Math.random();
-    let targetLink;
-    
-    if (randomValue < 0.5) {
-        targetLink = affiliateLinks.link1; // 50% of traffic
-    } else {
-        targetLink = affiliateLinks.link2; // 50% of traffic
-    }
+    // Direct 100% of traffic to offer 2499 (link2)
+    const targetLink = affiliateLinks.link2; // 100% of traffic
     
     // Redirect to the selected link
     window.location.href = targetLink;
@@ -130,4 +123,3 @@ document.addEventListener('DOMContentLoaded', function() {
         faqItems[0].classList.add('active');
     }
 });
-
