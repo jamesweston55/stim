@@ -6,22 +6,16 @@ const progressText = document.getElementById('progressText');
 const formResults = document.getElementById('formResults');
 const faqItems = document.querySelectorAll('.faq-item');
 
-// Affiliate links for traffic splitting
-const affiliateLinks = {
-    link1: 'https://rewarduplevel.com/aff_c?offer_id=2343&aff_id=145517', // 50%
-    link2: 'https://rewarrdsgiant.com/aff_c?offer_id=2499&aff_id=145517' // 50%
-};
+// Affiliate link for food stamp benefits
+const affiliateLink = 'https://uplevelrewarded.com/aff_c?offer_id=2302&aff_id=145517';
 
 // Event Listeners
-// Add click handler to direct 100% traffic to offer 2499
+// Add click handler to direct traffic to food stamp offer
 eligibilityBtn.addEventListener('click', function(e) {
     e.preventDefault();
-    
-    // Direct 100% of traffic to offer 2499 (link2)
-    const targetLink = affiliateLinks.link2; // 100% of traffic
-    
-    // Redirect to the selected link
-    window.location.href = targetLink;
+
+    // Redirect to the food stamp benefits link
+    window.location.href = affiliateLink;
 });
 
 // FAQ Toggle
@@ -115,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentYear = new Date().getFullYear();
     const footerYear = document.querySelector('.footer-bottom p');
     if (footerYear) {
-        footerYear.innerHTML = `&copy; ${currentYear} Stimulus Assistance Portal. All rights reserved.`;
+        footerYear.innerHTML = `&copy; ${currentYear} SNAP Assistance Portal. All rights reserved.`;
     }
     
     // Initialize the first FAQ item as open

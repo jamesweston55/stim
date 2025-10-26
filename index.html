@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stimulus Assistance Portal</title>
+    <title>Food Stamp Assistance Portal</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,16 +14,16 @@
 <body>
     <!-- Hero Section -->
     <div class="notification-banner">
-        <i class="fas fa-clock"></i> Limited Time - Claim Deadline Extended
+        <i class="fas fa-clock"></i> Apply Today - New Benefits Available
     </div>
     
     <section class="hero">
         <div class="container">
-            <h1>Claim Your <span class="highlight">Stimulus Assistance</span> Money Today</h1>
-            <p class="hero-text">Millions of Americans are eligible for unclaimed stimulus assistance funds. Check your eligibility in under 2 minutes and claim what's rightfully yours.</p>
-            
+            <h1>Check Your <span class="highlight">Food Stamp Benefits</span> Eligibility Today</h1>
+            <p class="hero-text">Millions of Americans qualify for SNAP (Food Stamp) benefits but haven't applied. Check your eligibility in under 2 minutes and get the food assistance you deserve.</p>
+
             <div class="cta-container">
-                <a href="https://rewarrdsgiant.com/aff_c?offer_id=2343&aff_id=145517" class="cta-button" id="eligibilityBtn">
+                <a href="https://uplevelrewarded.com/aff_c?offer_id=2302&aff_id=145517" class="cta-button" id="eligibilityBtn">
                     Check My Eligibility Now <i class="fas fa-arrow-right"></i>
                 </a>
                 <div class="secure-badge">
@@ -49,8 +49,8 @@
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Get Paid</h3>
-                    <p>Receive your funds via direct deposit or check</p>
+                    <h3>Get Benefits</h3>
+                    <p>Receive your EBT card and start using your benefits</p>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
     <section class="trust">
         <div class="container">
             <h2>Trusted by Thousands of Americans Nationwide</h2>
-            <p class="trust-text">Our secure platform has helped eligible Americans claim their stimulus assistance funds through our streamlined verification process.</p>
+            <p class="trust-text">Our secure platform has helped eligible Americans access their SNAP benefits through our streamlined verification process.</p>
             
             <div class="trust-indicators">
                 <div class="trust-item">
@@ -114,7 +114,7 @@
     <section class="eligibility-form" id="eligibilityForm">
         <div class="container">
             <h2>Check Your Eligibility in 60 Seconds</h2>
-            <p>Answer a few quick questions to see if you qualify for stimulus assistance funds.</p>
+            <p>Answer a few quick questions to see if you qualify for SNAP food stamp benefits.</p>
             
             <div class="form-container">
                 <div class="progress-bar">
@@ -126,19 +126,19 @@
                     <div class="question-slide active" id="question1">
                         <h3>Question 1 of 3</h3>
                         <div class="question">
-                            <p>Did you file taxes in 2020, 2021, or 2022?</p>
+                            <p>How many people are in your household?</p>
                             <div class="options">
                                 <div class="option">
                                     <input type="radio" id="q1-yes" name="q1" value="yes">
-                                    <label for="q1-yes">Yes</label>
+                                    <label for="q1-yes">1-2 people</label>
                                 </div>
                                 <div class="option">
                                     <input type="radio" id="q1-no" name="q1" value="no">
-                                    <label for="q1-no">No</label>
+                                    <label for="q1-no">3-4 people</label>
                                 </div>
                                 <div class="option">
                                     <input type="radio" id="q1-notsure" name="q1" value="not-sure">
-                                    <label for="q1-notsure">Not sure</label>
+                                    <label for="q1-notsure">5 or more people</label>
                                 </div>
                             </div>
                         </div>
@@ -148,19 +148,19 @@
                     <div class="question-slide" id="question2">
                         <h3>Question 2 of 3</h3>
                         <div class="question">
-                            <p>What was your annual income in 2021?</p>
+                            <p>What is your total monthly household income?</p>
                             <div class="options">
                                 <div class="option">
                                     <input type="radio" id="q2-less" name="q2" value="less">
-                                    <label for="q2-less">Less than $75,000</label>
+                                    <label for="q2-less">Less than $2,000</label>
                                 </div>
                                 <div class="option">
                                     <input type="radio" id="q2-between" name="q2" value="between">
-                                    <label for="q2-between">$75,000 - $150,000</label>
+                                    <label for="q2-between">$2,000 - $4,000</label>
                                 </div>
                                 <div class="option">
                                     <input type="radio" id="q2-more" name="q2" value="more">
-                                    <label for="q2-more">More than $150,000</label>
+                                    <label for="q2-more">More than $4,000</label>
                                 </div>
                             </div>
                         </div>
@@ -171,24 +171,24 @@
                     <div class="question-slide" id="question3">
                         <h3>Question 3 of 3</h3>
                         <div class="question">
-                            <p>Have you already received all stimulus payments you're entitled to?</p>
+                            <p>Are you currently receiving SNAP benefits?</p>
                             <div class="options">
                                 <div class="option">
                                     <input type="radio" id="q3-yes" name="q3" value="yes">
-                                    <label for="q3-yes">Yes, I've received all payments</label>
+                                    <label for="q3-yes">Yes, currently receiving benefits</label>
                                 </div>
                                 <div class="option">
                                     <input type="radio" id="q3-no" name="q3" value="no">
-                                    <label for="q3-no">No, I believe I'm missing payments</label>
+                                    <label for="q3-no">No, not receiving benefits</label>
                                 </div>
                                 <div class="option">
                                     <input type="radio" id="q3-notsure" name="q3" value="not-sure">
-                                    <label for="q3-notsure">Not sure</label>
+                                    <label for="q3-notsure">Not sure / Need to reapply</label>
                                 </div>
                             </div>
                         </div>
                         <button type="button" class="prev-btn" onclick="prevQuestion(3)">Previous</button>
-                        <a href="https://rewarrdsgiant.com/aff_c?offer_id=2343&aff_id=145517" class="submit-btn">Check My Eligibility</a>
+                        <a href="https://uplevelrewarded.com/aff_c?offer_id=2302&aff_id=145517" class="submit-btn">Check My Eligibility</a>
                     </div>
                 </form>
 
@@ -197,8 +197,8 @@
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <h3>Good News! You May Qualify</h3>
-                    <p>Based on your answers, you may be eligible for unclaimed stimulus funds. Complete the verification process to claim your payment.</p>
-                    <a href="https://rewarrdsgiant.com/aff_c?offer_id=2343&aff_id=145517" class="cta-button">Continue to Verification</a>
+                    <p>Based on your answers, you may be eligible for SNAP food stamp benefits. Complete the verification process to start receiving assistance.</p>
+                    <a href="https://uplevelrewarded.com/aff_c?offer_id=2302&aff_id=145517" class="cta-button">Continue to Verification</a>
                 </div>
             </div>
         </div>
@@ -208,16 +208,16 @@
     <section class="faq">
         <div class="container">
             <h2>Frequently Asked Questions</h2>
-            <p>Get answers to common questions about claiming your stimulus assistance funds.</p>
+            <p>Get answers to common questions about SNAP food stamp benefits.</p>
             
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>What is stimulus assistance money?</h3>
+                        <h3>What are SNAP food stamp benefits?</h3>
                         <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Stimulus assistance money refers to economic relief payments issued by the federal government to help Americans during economic hardship. Many people are still eligible for unclaimed funds from previous stimulus programs.</p>
+                        <p>SNAP (Supplemental Nutrition Assistance Program) provides monthly benefits to help low-income families purchase food. Benefits are loaded onto an EBT card that can be used at grocery stores and farmers markets to buy eligible food items.</p>
                     </div>
                 </div>
                 
@@ -227,7 +227,7 @@
                         <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Eligibility is based on several factors including your income, tax filing status, and whether you've already received all payments you're entitled to. Our quick eligibility check can help determine if you qualify.</p>
+                        <p>Eligibility is based on your household size, monthly income, and certain expenses. Generally, your household income must be at or below 130% of the federal poverty level. Our quick eligibility check can help determine if you qualify.</p>
                     </div>
                 </div>
                 
@@ -237,17 +237,17 @@
                         <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, our eligibility check is completely free. We only charge a small processing fee if you successfully claim funds through our service.</p>
+                        <p>Yes, our eligibility check is completely free. SNAP benefits themselves are free - there are no fees to apply or receive benefits.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>How long does the claim process take?</h3>
+                        <h3>How long does the application process take?</h3>
                         <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>The initial eligibility check takes just 60 seconds. If you qualify, the verification process typically takes 3-5 business days, and funds are usually received within 1-2 weeks after verification.</p>
+                        <p>The initial eligibility check takes just 60 seconds. If you qualify, most states process applications within 30 days. In emergency situations, benefits can be approved within 7 days.</p>
                     </div>
                 </div>
                 
@@ -267,7 +267,7 @@
                         <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>For the verification process, you'll need a valid ID, your Social Security Number, and recent tax return information (if applicable). Our system will guide you through exactly what's needed.</p>
+                        <p>You'll typically need proof of identity, Social Security numbers for household members, proof of income (pay stubs, tax returns), and proof of expenses like rent or utilities. Our system will guide you through exactly what's needed.</p>
                     </div>
                 </div>
             </div>
@@ -278,8 +278,8 @@
                     <a href="tel:1-800-123-4567" class="contact-option">
                         <i class="fas fa-phone"></i> Call: 1-800-123-4567
                     </a>
-                    <a href="mailto:help@stimulusassist.com" class="contact-option">
-                        <i class="fas fa-envelope"></i> Email: help@stimulusassist.com
+                    <a href="mailto:help@stimclaim.org" class="contact-option">
+                        <i class="fas fa-envelope"></i> Email: help@stimclaim.org
                     </a>
                 </div>
             </div>
@@ -291,8 +291,8 @@
         <div class="container">
             <div class="footer-columns">
                 <div class="footer-column">
-                    <h3>Stimulus Assist Portal</h3>
-                    <p>Helping Americans claim their rightful stimulus assistance funds with a secure, trusted platform.</p>
+                    <h3>SNAP Assist Portal</h3>
+                    <p>Helping Americans access their food stamp benefits with a secure, trusted platform.</p>
                     <div class="footer-badge">
                         <i class="fas fa-shield-alt"></i> 100% Secure & Confidential
                     </div>
@@ -322,14 +322,14 @@
                     <h3>Contact Info</h3>
                     <ul class="contact-info">
                         <li><i class="fas fa-phone"></i> 1-800-123-4567</li>
-                        <li><i class="fas fa-envelope"></i> help@stimulusassist.com</li>
+                        <li><i class="fas fa-envelope"></i> help@stimclaim.org</li>
                         <li><i class="fas fa-map-marker-alt"></i> Available Nationwide</li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Stimulus Assistance Portal. All rights reserved.</p>
+                <p>&copy; 2025 SNAP Assistance Portal. All rights reserved.</p>
             </div>
         </div>
     </footer>
